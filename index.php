@@ -1,7 +1,7 @@
 <?php
-/*
+/** 
 * main template file
-* @packege fbs
+* @package Hadudu
 */
 get_header();
 ?>

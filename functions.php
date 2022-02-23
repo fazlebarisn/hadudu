@@ -1,7 +1,7 @@
 <?php
 /** 
 * Theme functions
-* @packege fbs
+* @package Hadudu
 */
 
 if ( ! defined( 'FBS_DIR_PATH' ) ) {

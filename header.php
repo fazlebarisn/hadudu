@@ -1,7 +1,7 @@
 <?php
 /** 
 * Header file
-* @package fbs
+* @package Hadudu
 */
 ?>
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 <?php
 /** 
-* TFooter file
-* @packege fbs
+* Footer file
+* @package Hadudu
 */
 ?>
     <footer>Footer</footer>

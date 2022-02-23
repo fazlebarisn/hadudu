@@ -1,7 +1,7 @@
 <?php
 /** 
 * Header Navigation templats
-* @packege fbs
+* @package Hadudu
 */
 
 use FBS_THEME\Inc\Menus;
