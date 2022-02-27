@@ -2,7 +2,7 @@
 /**
  * Bootstraps the Theme.
  *
- * @package Fbs
+ * @package Hadudu
  */
 
 namespace HADUDU_THEME\Inc;
