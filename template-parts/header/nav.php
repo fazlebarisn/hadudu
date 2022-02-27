@@ -4,7 +4,7 @@
 * @package Hadudu
 */
 
-use FBS_THEME\Inc\Menus;
+use HADUDU_THEME\Inc\Menus;
 
 $menu_class = Menus::get_instance();
 $header_menu_id = $menu_class->get_menu_id('fbs-header-menu');

@@ -22,7 +22,7 @@
  *
  * If you specifically need multiple objects, then use a normal class.
  *
- * @package Aquila
+ * @package Hadudu
  */
 
 namespace HADUDU_THEME\Inc\Traits;
@@ -78,7 +78,7 @@ trait Singleton {
 			/**
 			 * Dependent items can use the `aquila_theme_singleton_init_{$called_class}` hook to execute code
 			 */
-			do_action( sprintf( 'fbs_theme_singleton_init_%s', $called_class ) ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+			do_action( sprintf( 'hadudu_theme_singleton_init_%s', $called_class ) ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
 		}
 

@@ -5,9 +5,9 @@
  * @package Fbs
  */
 
-namespace FBS_THEME\Inc;
+namespace HADUDU_THEME\Inc;
 
-use FBS_THEME\Inc\Traits\Singleton;
+use HADUDU_THEME\Inc\Traits\Singleton;
 
 class Menus {
 
