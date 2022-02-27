@@ -2,10 +2,10 @@
 /**
  * Autoloader file for theme.
  *
- * @package Fbs
+ * @package Hadudu
  */
 
-namespace FBS_THEME\Inc\Helpers;
+namespace HADUDU_THEME\Inc\Helpers;
 
 /**
  * Auto loader function.
@@ -16,7 +16,7 @@ namespace FBS_THEME\Inc\Helpers;
  */
 function autoloader( $resource = '' ) {
 	$resource_path  = false;
-	$namespace_root = 'FBS_THEME\\';
+	$namespace_root = 'HADUDU_THEME\\';
 	$resource       = trim( $resource, '\\' );
 
 	if ( empty( $resource ) || strpos( $resource, '\\' ) === false || strpos( $resource, $namespace_root ) !== 0 ) {
@@ -68,7 +68,7 @@ function autoloader( $resource = '' ) {
 				break;
 		}
 
-		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( FBS_DIR_PATH ), $directory, $file_name );
+		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( HADUDU_DIR_PATH ), $directory, $file_name );
 
 	}
 
@@ -84,4 +84,4 @@ function autoloader( $resource = '' ) {
 
 }
 
-spl_autoload_register( '\FBS_THEME\Inc\Helpers\autoloader' );
+spl_autoload_register( '\HADUDU_THEME\Inc\Helpers\autoloader' );
