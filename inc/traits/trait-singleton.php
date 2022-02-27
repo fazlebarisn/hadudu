@@ -25,7 +25,7 @@
  * @package Aquila
  */
 
-namespace FBS_THEME\Inc\Traits;
+namespace HADUDU_THEME\Inc\Traits;
 
 trait Singleton {
 
