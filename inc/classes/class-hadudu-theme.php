@@ -43,7 +43,7 @@ class HADUDU_THEME {
 		 add_theme_support( 'custom-background' , [
 			'default-color' => 'fff',
 			//'default-image' => get_template_directory_uri() . '/images/wapuu.jpg',
-			// 'default-repeat'         => 'repeat',
+			//'default-repeat'         => 'no-repeat',
 			// 'default-position-x'     => 'left',
 			// 'default-position-y'     => 'top',
 			// 'default-size'           => 'auto',

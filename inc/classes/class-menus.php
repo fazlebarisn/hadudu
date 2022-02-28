@@ -2,7 +2,7 @@
 /**
  * Register menus
  *
- * @package Fbs
+ * @package Hadudu
  */
 
 namespace HADUDU_THEME\Inc;
@@ -28,8 +28,8 @@ class Menus {
         // Register Menus
         register_nav_menus(
             [
-              'fbs-header-menu' => esc_html__( 'Header Menu', 'fbs' ),
-              'fbs-footer-menu' => esc_html__( 'Footer Menu', 'fbs' )
+              'hadudu-header-menu' => esc_html__( 'Header Menu', 'hadudu' ),
+              'hadudu-footer-menu' => esc_html__( 'Footer Menu', 'hadudu' )
             ]
           );
 
