@@ -40,6 +40,9 @@ class Menus {
         // get all the locations
         $locations = get_nav_menu_locations();
 
+        // if no menu created, retuen. I should display a message to create a menu later
+        if( empty($locations) ) return;
+
         // get object id by location
         $menu_id = $locations[$location];
 

@@ -4,6 +4,14 @@
 * @package Hadudu
 */
 
+if( !function_exists('dd') ){
+	function dd($val){
+		echo "<pre>";
+			var_dump($val);
+		echo "</pre>";
+	}
+}
+
 if ( ! defined( 'HADUDU_DIR_PATH' ) ) {
 	define( 'HADUDU_DIR_PATH', untrailingslashit( get_template_directory() ) );
 }
