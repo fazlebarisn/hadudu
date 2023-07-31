@@ -49,6 +49,11 @@ class Menus {
         return ! empty( $menu_id ) ? $menu_id : '' ;
     }
 
+    /**
+     *  We will recive the full menu and parent id
+     *  loop throw and check if any menu has parent is.
+     *  if any menu have parent id then push that in to a arrry
+     */
     public function get_child_menu_items( $menu_array , $parent_id ){
         
         $child_menu = [];

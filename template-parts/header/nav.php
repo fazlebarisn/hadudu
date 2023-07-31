@@ -6,9 +6,17 @@
 
 use HADUDU_THEME\Inc\Menus;
 
+// Get Menus class instance
 $menu_class = Menus::get_instance();
+
+// Call get_menu_id methord from Menus claas to get menu id
 $header_menu_id = $menu_class->get_menu_id('hadudu-header-menu');
 
+/**
+ *  wp_get_nav_menu_items function will return all menu information 
+ *  @author Fazle Bari <fazlebarisn@gmail.com>
+ *  @since 1.0.1
+ */
 $header_menus = wp_get_nav_menu_items( $header_menu_id );
 
 ?>
