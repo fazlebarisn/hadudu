@@ -79,7 +79,7 @@ class Meta_Boxes {
         if( !current_user_can( 'edit_post', $post_id) ) return;
 
         // Check the nonce value
-        if( !isset( $_POST['hide_title_nonce']) || !wp_verify_nonce(  'hide_title_nonce', plugin_basename( __FILE__ ) ) ){
+        if( !isset( $_POST['hide_title_nonce']) || !wp_verify_nonce( $_POST['hide_title_nonce'], plugin_basename( __FILE__ ) ) ){
             return;
         }
 
