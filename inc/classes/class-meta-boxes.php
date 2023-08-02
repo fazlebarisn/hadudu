@@ -51,6 +51,9 @@ class Meta_Boxes {
         // Get value from database
         $value = get_post_meta( $post->ID,'_hide_page_title',true );
 
+        // creating nonce for varifacation
+        wp_nonce_field( plugin_basename( __FILE__ ), 'hide_title_nonce' );
+
         ?>
         <label for="hadudu-title-field"><?php esc_html_e('Hide Page Title', 'hadudu') ?></label>
         <select name="hadudu_hide_title_field" id="hadudu-title-field" class="postbox">
@@ -72,6 +75,14 @@ class Meta_Boxes {
      * @param $post_id
      */
     public function save_post_metadata( $post_id ){
+        // if user don't have permition to edit post, return
+        if( !current_user_can( 'edit_post', $post_id) ) return;
+
+        // Check the nonce value
+        if( !isset( $_POST['hide_title_nonce']) || !wp_verify_nonce( plugin_basename( __FILE__ ), 'hide_title_nonce' ) ){
+            return;
+        }
+
         if( array_key_exists( 'hadudu_hide_title_field', $_POST )){
             update_post_meta(
                 $post_id,
