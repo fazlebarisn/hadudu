@@ -37,10 +37,16 @@ function the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $add
     echo get_the_post_custom_thumbnail( $post_id, $size, $additional_attributes );
 }
 
+/**
+ *  post publish date function
+ */
 function hadudu_post_on(){
     $time_string = '<time class="entry-date publish updated" datetime="%1$s">%2$s</time>';
 
-    // If the post is modified
+    /**
+     * check if the post publish date and modify date not same
+     * second <time> tag only for seo. We will hide second time section by css
+     */
     if( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ){
         $time_string = '<time class="entry-date publish" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
     }
