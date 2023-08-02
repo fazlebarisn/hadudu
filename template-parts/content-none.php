@@ -21,11 +21,11 @@
 						printf(
 								wp_kses(
 										__( 'Ready to publish your first post? <a href="%s">Get started here</a>', 'fbs' ),
-									[
+										[
 											'a' => [
 													'href' => []
 											]
-									]
+										]
 								),
 								esc_url( admin_url( 'post-new.php' ) )
 						)
