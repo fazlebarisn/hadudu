@@ -76,14 +76,14 @@ class Meta_Boxes {
      */
     public function save_post_metadata( $post_id ){
         // if user don't have permition to edit post, return
-        if( !current_user_can( 'edit_post', $post_id) ) return;
+        if( !current_user_can('edit_post', $post_id) ) return;
 
         // Check the nonce value
-        if( !isset( $_POST['hide_title_nonce']) || !wp_verify_nonce( $_POST['hide_title_nonce'], plugin_basename( __FILE__ ) ) ){
+        if( !isset( $_POST['hide_title_nonce'] ) || !wp_verify_nonce( $_POST['hide_title_nonce'], plugin_basename( __FILE__ ) ) ){
             return;
         }
 
-        if( array_key_exists( 'hadudu_hide_title_field', $_POST )){
+        if( array_key_exists( 'hadudu_hide_title_field', $_POST ) ){
             update_post_meta(
                 $post_id,
                 '_hide_page_title',
