@@ -68,3 +68,14 @@ function hadudu_post_on(){
 
     echo '<span class="posted-on text-secondary">'. $post_on.'</span>';
 }
+
+/**
+ * To display post author name 
+ */
+function hadudu_posted_by(){
+    $byline = sprintf(
+        esc_html_x( ' By %s', 'post author', 'hadudu' ),
+        '<span class="author vcard"><a href="'. esc_url( get_author_posts_url( get_the_author_meta('ID')) ) .'">' . esc_html( get_the_author() ) . '</a></span>'
+    );
+    echo '<span class="byline text-secondary">' . $byline . '</span>';
+}

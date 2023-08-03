@@ -24,3 +24,6 @@ img{
 .updated:not(.published){
     display: none;
 }
+.nav-item:hover .dropdown-menu:not(.show){
+    display: block;
+}
