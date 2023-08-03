@@ -22,6 +22,7 @@
         );
     }else{
         hadudu_the_excerpt();
+        echo hadudu_excerpt_more();
     }
     ?>
 </div>

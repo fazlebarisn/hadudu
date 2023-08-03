@@ -80,6 +80,9 @@ function hadudu_posted_by(){
     echo '<span class="byline text-secondary">' . $byline . '</span>';
 }
 
+/**
+ * To display excerpt
+ */
 function hadudu_the_excerpt( $trim_character_count = 0 ){
 
     if( ! has_excerpt() || 0 === $trim_character_count ){
@@ -92,4 +95,18 @@ function hadudu_the_excerpt( $trim_character_count = 0 ){
     $excerpt = substr( $excerpt, 0, strrpos( $excerpt, ' ') );
 
     echo $excerpt . '[...]';
+}
+
+/**
+ * Read more button
+ */
+function hadudu_excerpt_more( $more = '' ){
+    if( ! is_single() ){
+        $more = sprintf(
+            '<button class="mt-2 btn btn-info"><a class="hadudu-read-more text-white" href="%1$s">%2$s</a></button>',
+            get_permalink( get_the_ID() ),
+            __('Read More', 'hadudu'),
+        );
+    }
+    return $more;
 }
