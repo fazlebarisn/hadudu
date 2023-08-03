@@ -51,6 +51,7 @@ function hadudu_post_on(){
         $time_string = '<time class="entry-date publish" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
     }
 
+    // second two parameter only for if the post publish date and modify date not same
     $time_string = sprintf(
         $time_string,
         esc_attr( get_the_date(DATE_W3C) ),
@@ -59,6 +60,7 @@ function hadudu_post_on(){
         esc_attr( get_the_modified_date() )
     );
 
+    // inject the $time_string 
     $post_on = sprintf(
         esc_html_x( 'Post On %s', 'post date', 'hadudu'),
         '<a href="'.esc_url(get_the_permalink()).'" rel="bookmark">' .$time_string.'</a>'
