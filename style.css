@@ -33,3 +33,6 @@ a{
 .entry-content > button{
     display: block;
 }
+span.page-numbers.current > span{
+    background-color: grey;
+}
