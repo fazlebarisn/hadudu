@@ -44,6 +44,7 @@ get_header();
                                         <?php
                                     }
                                 endwhile;
+                                hadudu_pagination();
                             ?>
                         </div>
                     </div>
