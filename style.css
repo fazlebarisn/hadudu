@@ -21,9 +21,15 @@ img{
     width: 100%;
     height: auto;
 }
+a{
+    text-decoration: none;
+}
 .updated:not(.published){
     display: none;
 }
 .nav-item:hover .dropdown-menu:not(.show){
+    display: block;
+}
+.entry-content > button{
     display: block;
 }
