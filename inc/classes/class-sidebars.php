@@ -24,7 +24,27 @@ class Sidebars {
 	}
 
     public function register_sidebars(){
-        
+
+        register_sidebar([
+			'name'				=> __('Sidebar', 'hadudu'),
+			'id'				=> 'sidebar-1',
+			'description'		=> __('Main sidebar', 'hadudu'),
+			'before_widget'		=> '<div id="%1$s" class="widget widget-sidebar %2$s">',
+			'after_widget'		=> '</div>',
+			'before_title'		=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		]);
+
+        register_sidebar([
+			'name'				=> __('Footer', 'hadudu'),
+			'id'				=> 'sidebar-2',
+			'description'		=> __('Fooler sidebar', 'hadudu'),
+			'before_widget'		=> '<div id="%1$s" class="widget widget-footer cell column %2$s">',
+			'after_widget'		=> '</div>',
+			'before_title'		=> '<h3 class="widget-title">',
+			'after_title'		=> '</h3>'
+		]);
+
     }
 
 }
