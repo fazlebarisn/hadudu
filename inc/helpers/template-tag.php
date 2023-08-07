@@ -111,6 +111,9 @@ function hadudu_excerpt_more( $more = '' ){
     return $more;
 }
 
+/**
+ * For pagination
+ */
 function hadudu_pagination(){
 
     $allowed_tags = [
