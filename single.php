@@ -13,7 +13,7 @@ get_header();
                 <?php
                 if( have_posts() ) :
                     ?>
-                    <div class="poet-wrap">
+                    <div class="post-wrap">
                         <?php
                             if( is_home() && ! is_front_page() ){
                                 ?>
@@ -29,6 +29,8 @@ get_header();
                                 get_template_part( 'template-parts/content' );
                             endwhile;
                         ?>
+                        <div class="prev-link"><?php previous_post_link(); ?></div>
+                        <div class="next-link"> <?php next_post_link(); ?></div>
                     </div>
                     <?php
 
@@ -42,12 +44,6 @@ get_header();
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <?php 
-            previous_post_link();
-            next_post_link();
-            ?>
         </div>
     </main>
 </div>
