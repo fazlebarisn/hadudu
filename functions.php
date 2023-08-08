@@ -21,27 +21,27 @@ if ( ! defined( 'HADUDU_DIR_URI' ) ) {
 }
 
 if ( ! defined( 'HADUDU_BUILD_URI' ) ) {
-	define( 'HADUDU_BUILD_URI', untrailingslashit( get_template_directory_uri() ) . '/build' );
+	define( 'HADUDU_BUILD_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build' );
 }
 
 if ( ! defined( 'HADUDU_BUILD_JS_URI' ) ) {
-	define( 'HADUDU_BUILD_JS_URI', untrailingslashit( get_template_directory_uri() ) . '/build/js' );
+	define( 'HADUDU_BUILD_JS_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build/js' );
 }
 
 if ( ! defined( 'HADUDU_BUILD_JS_DIR_PATH' ) ) {
-	define( 'HADUDU_BUILD_JS_DIR_PATH', untrailingslashit( get_template_directory() ) . '/build/js' );
+	define( 'HADUDU_BUILD_JS_DIR_PATH', untrailingslashit( get_template_directory() ) . '/assets/build/js' );
 }
 
 if ( ! defined( 'HADUDU_BUILD_IMG_URI' ) ) {
-	define( 'HADUDU_BUILD_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/build/src/img' );
+	define( 'HADUDU_BUILD_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build/src/img' );
 }
 
 if ( ! defined( 'HADUDU_BUILD_CSS_URI' ) ) {
-	define( 'HADUDU_BUILD_CSS_URI', untrailingslashit( get_template_directory_uri() ) . '/build/css' );
+	define( 'HADUDU_BUILD_CSS_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build/css' );
 }
 
 if ( ! defined( 'HADUDU_BUILD_CSS_DIR_PATH' ) ) {
-	define( 'HADUDU_BUILD_CSS_DIR_PATH', untrailingslashit( get_template_directory() ) . '/build/css' );
+	define( 'HADUDU_BUILD_CSS_DIR_PATH', untrailingslashit( get_template_directory() ) . '/assets/build/css' );
 }
 
 require_once HADUDU_DIR_PATH . '/inc/helpers/autoloader.php';
