@@ -37,7 +37,7 @@ class Assets {
 
 	public function registerScripts(){
 		// Register Scripts
-		wp_register_script( 'main-js', HADUDU_DIR_URI . '/assets/main.js', ['jquery'], filemtime( HADUDU_DIR_PATH . '/assets/main.js'), true );
+		wp_register_script( 'main-js', HADUDU_BUILD_JS_URI . '/main.js', ['jquery'], filemtime( HADUDU_BUILD_JS_DIR_PATH . '/main.js'), true );
 		wp_register_script( 'bootstrap-js', HADUDU_DIR_URI . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false, true );
 
 		// Enqueue Script
