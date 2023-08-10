@@ -76,10 +76,15 @@ class HADUDU_THEME {
 			 ]
 		 );
 
-		 // if want to add style for editor
-		 add_editor_style();
+		 // Default Editor style
+		 add_theme_support('aditor-styles');
+
+		 // Custom aditor style
+		 add_editor_style('assets/build/css/editor.css');
 
 		 add_theme_support('wp-block-styles');
+
+		 // Wide image support 
 		 add_theme_support('align-wide');
 
 		 // Set a width for the theme
