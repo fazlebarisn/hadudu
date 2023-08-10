@@ -22,7 +22,7 @@ get_header();
                                             <?php single_post_title(); ?>
                                         </h1>
                                     </header>
-                                <?php
+                                <?php 
                             }
                             // Start the loop
                             while( have_posts() ) : the_post();
