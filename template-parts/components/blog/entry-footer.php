@@ -16,11 +16,11 @@
     <?php
     foreach( $artical_terms as $key => $artical_term ){
         ?>
-        <button class="btn border border-secondary mb-2 mr-2">
-            <a href="<?php echo esc_url(get_term_link($artical_term)) ?>">
+        <a href="<?php echo esc_url(get_term_link($artical_term)) ?>">
+            <button class="btn border border-secondary mb-2 mr-2">
                 <?php echo esc_html($artical_term->name) ?>
-            </a>
-        </button>
+            </button>
+        </a>
         <?php
     }
     ?>

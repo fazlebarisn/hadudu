@@ -27,14 +27,13 @@ class Assets {
 
 	public function registerStyles(){
 		// Register Syle
-		wp_register_style('stylesheet', get_stylesheet_uri(), [], filemtime( HADUDU_DIR_PATH . '/style.css'), 'all');
 		wp_register_style('bootstrap-css', HADUDU_DIR_URI . '/assets/src/library/css/bootstrap.min.css', [], false, 'all');
-		wp_register_style('fonts-css', get_template_directory_uri() . '/assets/src/library/fonts/fonts.css', [], false, 'all');
+		wp_register_style( 'main-css', HADUDU_BUILD_CSS_URI . '/main.css', ['bootstrap-css'], filemtime( HADUDU_BUILD_CSS_DIR_PATH . '/main.css' ), 'all' );
 
 		// Enqueue Style
 		wp_enqueue_style('bootstrap-css');
-		wp_enqueue_style('stylesheet');
-		wp_enqueue_style('fonts-css');
+		wp_enqueue_style( 'main-css' );
+
 	}
 
 	public function registerScripts(){

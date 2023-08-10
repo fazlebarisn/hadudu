@@ -103,7 +103,7 @@ function hadudu_the_excerpt( $trim_character_count = 0 ){
 function hadudu_excerpt_more( $more = '' ){
     if( ! is_single() ){
         $more = sprintf(
-            '<button class="mt-2 btn btn-info"><a class="hadudu-read-more text-white" href="%1$s">%2$s</a></button>',
+            '<a class="hadudu-read-more text-white" href="%1$s"><button class="mt-2 btn btn-info">%2$s</button></a>',
             get_permalink( get_the_ID() ),
             __('Read More', 'hadudu'),
         );
