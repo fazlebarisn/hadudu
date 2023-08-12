@@ -25,7 +25,9 @@ class Block_Patterns{
 
 	public function register_block_patterns(){
 		if( function_exists('register_block_pattern') ){
-
+			/**
+			 * Register cover block patterns
+			 */
 			$cover_content = $this->get_pattern_content('template-parts/patterns/cover');
 
 			register_block_pattern(
@@ -37,6 +39,22 @@ class Block_Patterns{
 					'content'		=> $cover_content,
 				]
 			);
+
+			/**
+			 * Register two column block patterns
+			 */
+			$columns_content = $this->get_pattern_content('template-parts/patterns/columns');
+
+			register_block_pattern(
+				'hadudu/columns',
+				[
+					'title'			=> __('Hadudu Columns', 'hadudu'),
+					'description'	=> __('A Hadudu column block with text', 'hadudu'),
+					'categories'	=> ['columns'],
+					'content'		=> $columns_content,
+				]
+			);
+
 		}
 	}
 
@@ -52,7 +70,7 @@ class Block_Patterns{
 
 		$pattern_categories = [
 			'cover'		=> __('Cover', 'hadudu'),
-			'carousel'	=> __('Carousel', 'hadudu')
+			'columns'	=> __('Columns', 'hadudu')
 		];
 
 		if( ! empty( $pattern_categories) && is_array( $pattern_categories) ){
