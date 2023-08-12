@@ -88,6 +88,9 @@ class HADUDU_THEME {
 		 // Wide image support 
 		 add_theme_support('align-wide');
 
+		 // Remove the default pattern of WodePress
+		 remove_theme_support( 'core-block-patterns' );
+
 		 // Set a width for the theme
 		 global $content_width;
 		 if(! isset($content_width)){
