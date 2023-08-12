@@ -26,10 +26,7 @@ class Block_Patterns{
 	public function register_block_patterns(){
 		if( function_exists('register_block_pattern') ){
 
-			ob_start();
-			get_template_part('template-parts/patterns/cover');
-			$cover_content = ob_get_contents();
-			ob_end_clean();
+			$cover_content = $this->get_pattern_content('template-parts/patterns/cover');
 
 			register_block_pattern(
 				'hadudu/cover',
@@ -41,6 +38,14 @@ class Block_Patterns{
 				]
 			);
 		}
+	}
+
+	public function get_pattern_content( $template_path ){
+		ob_start();
+		get_template_part($template_path);
+		$content = ob_get_contents();
+		ob_end_clean();
+		return $content;
 	}
 
 	public function register_block_pattern_categories(){
