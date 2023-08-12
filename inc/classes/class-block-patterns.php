@@ -55,7 +55,7 @@ class Block_Patterns{
 
 		$pattern_categories = [
 			'cover'	=> __('Cover', 'hadudu'),
-			'carouswl'	=> __('Carousel', 'hadudu')
+			'carousel'	=> __('Carousel', 'hadudu')
 		];
 
 		if( ! empty( $pattern_categories) && is_array( $pattern_categories) ){
