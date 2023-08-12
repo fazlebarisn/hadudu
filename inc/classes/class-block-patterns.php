@@ -50,7 +50,7 @@ class Block_Patterns{
 				[
 					'title'			=> __('Hadudu Columns', 'hadudu'),
 					'description'	=> __('A Hadudu column block with text', 'hadudu'),
-					'categories'	=> ['columns'],
+					'categories'	=> ['tow-columns'],
 					'content'		=> $columns_content,
 				]
 			);
@@ -70,7 +70,7 @@ class Block_Patterns{
 
 		$pattern_categories = [
 			'cover'		=> __('Cover', 'hadudu'),
-			'columns'	=> __('Columns', 'hadudu')
+			'tow-columns'	=> __('Tow Columns', 'hadudu')
 		];
 
 		if( ! empty( $pattern_categories) && is_array( $pattern_categories) ){
