@@ -29,4 +29,4 @@ $cover_image_url = HADUDU_BUILD_IMG_URI . '/patterns/cover.jpg';
 <!-- /wp:buttons -->
     </div>
 </div>
-<!-- /wp:cover -->
+<!-- /wp:cover --> 

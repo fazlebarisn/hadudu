@@ -19,10 +19,10 @@ class Assets {
 	}
 
 	protected function setup_hooks() {
-
 		// actions hooks
 		add_action( 'wp_enqueue_scripts' , [ $this, 'registerStyles' ] );
 		add_action( 'wp_enqueue_scripts' , [ $this, 'registerScripts' ] );
+		add_action( 'enqueue_block_assets' , [ $this, 'enqueue_editor_assets' ] );
 	}
 
 	public function registerStyles(){
@@ -44,5 +44,9 @@ class Assets {
 		// Enqueue Script
 		wp_enqueue_script('bootstrap-js');
 		wp_enqueue_script('main-js');
+	}
+
+	public function enqueue_editor_assets(){
+		
 	}
 }
