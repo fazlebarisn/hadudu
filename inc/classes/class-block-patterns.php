@@ -23,6 +23,12 @@ class Block_Patterns{
 		add_action( 'init' , [ $this, 'register_block_pattern_categories' ] );
 	}
 
+		/**
+	 * Register pattern blocks 
+	 * @return void
+	 * @since 1.0.0
+	 * @author Fazle Bari <fazlebarisn@gmail.com>
+	 */
 	public function register_block_patterns(){
 		if( function_exists('register_block_pattern') ){
 			/**
@@ -58,6 +64,12 @@ class Block_Patterns{
 		}
 	}
 
+	/**
+	 * Get content 
+	 * @return $content html
+	 * @since 1.0.0
+	 * @author Fazle Bari <fazlebarisn@gmail.com>
+	 */
 	public function get_pattern_content( $template_path ){
 		ob_start();
 		get_template_part($template_path);
@@ -66,6 +78,12 @@ class Block_Patterns{
 		return $content;
 	}
 
+		/**
+	 * Register block categories 
+	 * @return void
+	 * @since 1.0.0
+	 * @author Fazle Bari <fazlebarisn@gmail.com>
+	 */
 	public function register_block_pattern_categories(){
 
 		$pattern_categories = [
