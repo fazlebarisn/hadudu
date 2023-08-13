@@ -32,6 +32,10 @@ if ( ! defined( 'HADUDU_BUILD_JS_DIR_PATH' ) ) {
 	define( 'HADUDU_BUILD_JS_DIR_PATH', untrailingslashit( get_template_directory() ) . '/assets/build/js' );
 }
 
+if ( ! defined( 'HADUDU_BUILD_PATH' ) ) {
+	define( 'HADUDU_BUILD_PATH', untrailingslashit( get_template_directory() ) . '/assets/build' );
+}
+
 if ( ! defined( 'HADUDU_BUILD_IMG_URI' ) ) {
 	define( 'HADUDU_BUILD_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build/src/img' );
 }

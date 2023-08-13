@@ -47,6 +47,46 @@ class Assets {
 	}
 
 	public function enqueue_editor_assets(){
-		
+
+		$assets_config_file = sprintf( '%s/assets.php', HADUDU_BUILD_PATH );
+
+		if( ! file_exists( $assets_config_file ) ){
+			return;
+		}
+
+		$assets_config = require_once $assets_config_file;
+
+		if( empty( $assets_config['js/editor.js'] ) ){
+			return;
+		}
+
+		$editor_asset = $assets_config['js/editor.js'];
+		$js_dependencies = ( ! empty( $editor_asset['dependencies'] )) ? $editor_asset['dependencies'] : [];
+		$version = ( ! empty( $editor_asset['version'] )) ? $editor_asset['version'] : fileatime($assets_config_file);
+
+		// Theme gutenberg block js
+		if( is_admin() ){
+			wp_enqueue_script(
+				'hadudu-block-js',
+				HADUDU_BUILD_JS_URI . '/blocks.js',
+				$js_dependencies,
+				$version,
+				true,
+			);
+		}
+
+		// Theme Gutenberd block CSS
+		$css_dependencies = [
+			'wp-block-library-theme',
+			'wp-block-library'
+		];
+
+		wp_enqueue_style(
+			'hadudu-block-css',
+			HADUDU_BUILD_CSS_URI . '/blocks.css',
+			$css_dependencies,
+			fileatime( HADUDU_BUILD_CSS_DIR_PATH . '/blocks.css'),
+			'all'
+		);
 	}
 }
