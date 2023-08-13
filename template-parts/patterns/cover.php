@@ -7,7 +7,7 @@
 $cover_image_url = HADUDU_BUILD_IMG_URI . '/patterns/cover.jpg';
 ?>
 
-<!-- wp:cover {"url":"http://localhost/wp/wp-content/uploads/2023/08/cover.jpg","id":389,"dimRatio":50,"align":"full","layout":{"type":"constrained"}} -->
+<!-- wp:cover {"url":"<?php esc_url( $cover_image_url ); ?>","id":389,"dimRatio":50,"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull">
     <span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span>
     <img class="wp-block-cover__image-background wp-image-389" alt="" src="<?php esc_url( $cover_image_url ); ?>" data-object-fit="cover"/>
