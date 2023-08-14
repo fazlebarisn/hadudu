@@ -25,7 +25,19 @@ class Blocks {
 
 	public function add_block_categories( $categories ){
         $catecory_slugs = wp_list_pluck( $categories, 'slug' );
-        // dd($catecory_slugs, true);
+        
+		$result = in_array( 'hadudu', $catecory_slugs, true ) ? $categories : 
+			array_merge(
+				$categories,
+				[
+					[
+						'slug'	=> 'hadudu',
+						'title'	=> __('Hadudu Blocks', 'hadudu'),
+						'icon'	=> 'table-row-after'
+					]
+				]
+			);
+		return $result;
 
 	}
 
