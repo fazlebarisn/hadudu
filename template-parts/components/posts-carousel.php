@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="parrent">
+<div class="posts-carousel">
     <div class="child">One</div>
     <div class="child">Two</div>
     <div class="child">Three</div>
