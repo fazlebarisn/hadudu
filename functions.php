@@ -21,8 +21,8 @@ if ( ! defined( 'HADUDU_DIR_PATH' ) ) {
 	define( 'HADUDU_DIR_PATH', untrailingslashit( get_template_directory() ) );
 }
 
-if ( ! defined( 'HADUDU_DIR_URI' ) ) {
-	define( 'HADUDU_DIR_URI', untrailingslashit( get_template_directory_uri() ) );
+if ( ! defined( 'HADUDU_LIB_DIR_URI' ) ) {
+	define( 'HADUDU_LIB_DIR_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/src/library' );
 }
 
 if ( ! defined( 'HADUDU_BUILD_URI' ) ) {
