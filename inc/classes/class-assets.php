@@ -29,8 +29,8 @@ class Assets {
 		// Register Syle
 		wp_register_style('bootstrap', HADUDU_LIB_DIR_URI . '/css/bootstrap.min.css', [], false, 'all');
 		wp_register_style( 'slick', HADUDU_LIB_DIR_URI . '/css/slick.css', [], false, 'all' );
-		wp_register_style( 'slick-theme', HADUDU_LIB_DIR_URI . '/css/slick-theme.css', ['slick.css'], false, 'all' );
-		wp_register_style( 'main', HADUDU_BUILD_CSS_URI . '/main.css', ['bootstrap-css'], filemtime( HADUDU_BUILD_CSS_DIR_PATH . '/main.css' ), 'all' );
+		wp_register_style( 'slick-theme', HADUDU_LIB_DIR_URI . '/css/slick-theme.css', ['slick'], false, 'all' );
+		wp_register_style( 'main', HADUDU_BUILD_CSS_URI . '/main.css', ['bootstrap'], filemtime( HADUDU_BUILD_CSS_DIR_PATH . '/main.css' ), 'all' );
 
 		// Enqueue Style
 		wp_enqueue_style('bootstrap');
