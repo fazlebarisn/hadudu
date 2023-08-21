@@ -50,6 +50,11 @@ class Assets {
 		wp_enqueue_script('slick');
 		wp_enqueue_script('bootstrap');
 		wp_enqueue_script('main');
+
+		wp_localize_script('main', 'siteConfig', [
+			'ajaxUrl'		=> admin_url('admin-ajax.php'),
+			'ajax_nonce'	=> wp_create_nonce('loadmore_post_nonce')
+		]);
 	}
 
 	public function enqueue_editor_assets(){
